@@ -1,0 +1,39 @@
+		{
+			"matches": ["https://www.youtube.com/*"],
+			"all_frames": true,
+			"js": [
+				"src/js/youtube.js",
+				"src/js/content_script.js"
+			],
+			"run_at": "document_idle"
+		},
+		{
+			"matches": ["https://music.youtube.com/*"],
+			"all_frames": true,
+			"js": [
+				"src/js/youtubemusic.js",
+				"src/js/content_script.js"
+			],
+			"run_at": "document_idle"
+		},
+		{
+			"matches": ["https://soundcloud.com/*"],
+			"all_frames": true,
+			"js": [
+				"src/js/soundcloud.js",
+				"src/js/content_script.js"
+			],
+			"run_at": "document_idle"
+		},
+		{
+			"matches": [
+				"https://app.plex.tv/desktop",
+				"https://app.plex.tv/desktop/*"
+			],
+			"all_frames": true,
+			"js": [
+				"src/js/plex.js",
+				"src/js/content_script.js"
+			],
+			"run_at": "document_idle"
+		}

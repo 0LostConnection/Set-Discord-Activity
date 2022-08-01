@@ -6,19 +6,19 @@
 	"name": "__MSG_appName__",
 	"description": "__MSG_appDesc__",
 	"icons": {
-		"128": "icon.png"
+		"128": "assets/icon.png"
 	},
-	"version": "2.10.0",
-	"author": "Sainan",
+	"version": "1.0.0",
+	"author": "LostConnection",
 	"minimum_chrome_version": "41",
 	"permissions": [
 		"storage"
 	],
 	"browser_action": {
-		"default_popup": "popup.html"
+		"default_popup": "src/html/popup.html"
 	},
 	"background": {
-		"scripts": ["background.js"],
+		"scripts": ["src/js/background.js"],
 		"persistent": false
 	},
 	"content_scripts": [
@@ -29,47 +29,8 @@
 				"https://canary.discord.com/channels/*"
 			],
 			"all_frames": true,
-			"js": ["discord.js"],
+			"js": ["src/js/discord.js"],
 			"run_at": "document_start"
-		},
-		{
-			"matches": ["https://www.youtube.com/*"],
-			"all_frames": true,
-			"js": [
-				"youtube.js",
-				"content_script.js"
-			],
-			"run_at": "document_idle"
-		},
-		{
-			"matches": ["https://music.youtube.com/*"],
-			"all_frames": true,
-			"js": [
-				"youtubemusic.js",
-				"content_script.js"
-			],
-			"run_at": "document_idle"
-		},
-		{
-			"matches": ["https://soundcloud.com/*"],
-			"all_frames": true,
-			"js": [
-				"soundcloud.js",
-				"content_script.js"
-			],
-			"run_at": "document_idle"
-		},
-		{
-			"matches": [
-				"https://app.plex.tv/desktop",
-				"https://app.plex.tv/desktop/*"
-			],
-			"all_frames": true,
-			"js": [
-				"plex.js",
-				"content_script.js"
-			],
-			"run_at": "document_idle"
 		}
 	]
 }
