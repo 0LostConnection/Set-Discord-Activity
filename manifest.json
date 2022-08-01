@@ -15,7 +15,7 @@
 		"storage"
 	],
 	"browser_action": {
-		"default_popup": "src/html/popup.html"
+		"default_popup": "src/html/newPopup.html"
 	},
 	"background": {
 		"scripts": ["src/js/background.js"],
